@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Downhill Dash</title>
+  <meta name="description" content="A retro downhill ski game. Dodge trees, hit jumps, and whatever you do past 2,000m, keep moving.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛷️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game" aria-label="Downhill Dash game"></canvas>
+
+  <div id="hud" class="win">
+    <div class="titlebar">SLOPE.EXE</div>
+    <div class="stats">
+      <div><span>Distance</span><b id="hDist">0m</b></div>
+      <div><span>Speed</span><b id="hSpeed">0 km/h</b></div>
+      <div><span>Time</span><b id="hTime">0:00</b></div>
+      <div><span>Style</span><b id="hStyle">0</b></div>
+    </div>
+    <div class="boost"><span>Boost</span><div class="bar"><i id="hBoost"></i></div></div>
+  </div>
+
+  <div id="warn" class="hidden">Something is coming down the hill. Keep moving.</div>
+
+  <button id="boostBtn" class="win" aria-label="Boost">BOOST</button>
+
+  <div id="overlay">
+    <div class="win dialog" role="dialog" aria-labelledby="dlgTitle">
+      <div class="titlebar" id="dlgTitle">Downhill Dash</div>
+      <div class="body" id="dlgBody"></div>
+      <div class="actions"><button id="dlgBtn" class="btn">Start skiing</button></div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
